@@ -48,16 +48,16 @@ const HomeScreen = () => {
 					/>
 
 					<div className='max-w-2xl'>
-						<h1 className='mt-4 text-6xl font-extrabold text-balance'>
+						<h1 className='mt-4 text-3xl md:text-6xl font-extrabold text-balance'>
 							{trendingContent?.title || trendingContent?.name}
 						</h1>
-						<p className='mt-2 text-lg'>
+						<p className='mt-2 text-sm md:text-lg'>
 							{trendingContent?.release_date?.split("-")[0] ||
 								trendingContent?.first_air_date.split("-")[0]}{" "}
 							| {trendingContent?.adult ? "18+" : "PG-13"}
 						</p>
 
-						<p className='mt-4 text-lg'>
+						<p className='mt-2 text-sm md:text-lg'>
 							{trendingContent?.overview.length > 200
 								? trendingContent?.overview.slice(0, 200) + "..."
 								: trendingContent?.overview}
