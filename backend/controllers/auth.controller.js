@@ -57,10 +57,11 @@ export async function signup(req, res) {
 			},
 		});
 	} catch (error) {
-	
+		console.error("Signup Error:", error); // <-- This logs the actual error
 		res.status(500).json({ success: false, message: "Internal server error" });
 	}
 }
+
 
 export async function login(req, res) {
 	try {
